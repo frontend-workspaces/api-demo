@@ -15,6 +15,13 @@ app.get('/', (req, res) => {
   });
 })
 
+app.get('/api/v1', (req, res) => {
+  res.status(200).json({
+    apiVersion: '1.0.0',
+    port: PORT
+  });
+})
+
 app.get('/home', (req, res) => {
   res.status(200).json({
     path: 'Home'
