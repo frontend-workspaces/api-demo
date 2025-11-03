@@ -1,7 +1,11 @@
 // index.js
 const express = require('express')
+require('dotenv').config()
+
 const app = express()
-const PORT = 4000
+const PORT = process.env.PORT || 3000
+
+console.log('PORT:', PORT);
 
 
 app.get('/', (req, res) => {
